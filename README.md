@@ -110,6 +110,7 @@ A IA pode responder com algo simples, por exemplo:
 
 ## Entrega
 
+- A entrega do projeto deve ser feita em até 7 dias após o recebimento do link desse repositório
 - Faça um fork público desse repositório
 - Adicione seu código à medida em que desenvolve
 - Inclua:
