@@ -123,14 +123,17 @@ A IA pode responder com algo simples, por exemplo:
 
 ---
 
-## Ì∫Ä Como Executar o Projeto
+##  Como Executar o Projeto (Instru√ß√µes de Setup)
+
+> **Nota:** Esta se√ß√£o foi adicionada como parte da entrega do teste.
+
 
 ### Pr√©-requisitos
 - Node.js 18+
 - Docker e Docker Compose
 - Git
 
-### Ì¥ß Setup do Backend
+### Setup do Backend
 ```bash
 # 1. Entrar na pasta backend
 cd backend
@@ -153,31 +156,17 @@ npm run dev
 
 **Backend rodando em:** `http://localhost:3333`
 
-### Ìæ® Setup do Frontend
-```bash
-# 1. Entrar na pasta frontend
-cd frontend
 
-# 2. Instalar depend√™ncias
-npm install
 
-# 3. Iniciar o servidor
-npm run dev
-```
+##  Progresso do Desenvolvimento
 
-**Frontend rodando em:** `http://localhost:5173`
-
----
-
-## Ì≥ä Progresso do Desenvolvimento
-
-### ‚úÖ Conclu√≠do (Dia 1)
+### Conclu√≠do (Dia 1)
 - [x] Setup do projeto
 - [x] Configura√ß√£o do PostgreSQL (Docker)
 - [x] Modelagem do banco (User, Chat, Message)
 - [x] Migrations criadas
 
-### Ì¥Ñ Pr√≥ximos passos
+### Pr√≥ximos passos
 - [ ] Rotas de autentica√ß√£o
 - [ ] Sistema de mensagens
 - [ ] IA simulada
@@ -185,9 +174,9 @@ npm run dev
 
 ---
 
-## Ì±§ Desenvolvido por
+## Desenvolvido por
 
-**Fernanda Vicente**
+**Maria Fernanda de Oliveira Vicente**
 - Portfolio: [nandavicente.github.io](https://nandavicente.github.io/)
 - GitHub: [@nandavicente](https://github.com/nandavicente)
 
