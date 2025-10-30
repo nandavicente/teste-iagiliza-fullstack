@@ -120,3 +120,77 @@ A IA pode responder com algo simples, por exemplo:
 ---
 
 ## **Boa sorte, estamos ansiosos para te receber no time IAgiliza!**
+
+---
+
+## Ì∫Ä Como Executar o Projeto
+
+### Pr√©-requisitos
+- Node.js 18+
+- Docker e Docker Compose
+- Git
+
+### Ì¥ß Setup do Backend
+```bash
+# 1. Entrar na pasta backend
+cd backend
+
+# 2. Instalar depend√™ncias
+npm install
+
+# 3. Configurar vari√°veis de ambiente
+cp .env.example .env
+
+# 4. Subir o PostgreSQL com Docker
+docker-compose up -d
+
+# 5. Rodar migrations do Prisma
+npx prisma migrate dev
+
+# 6. Iniciar o servidor
+npm run dev
+```
+
+**Backend rodando em:** `http://localhost:3333`
+
+### Ìæ® Setup do Frontend
+```bash
+# 1. Entrar na pasta frontend
+cd frontend
+
+# 2. Instalar depend√™ncias
+npm install
+
+# 3. Iniciar o servidor
+npm run dev
+```
+
+**Frontend rodando em:** `http://localhost:5173`
+
+---
+
+## Ì≥ä Progresso do Desenvolvimento
+
+### ‚úÖ Conclu√≠do (Dia 1)
+- [x] Setup do projeto
+- [x] Configura√ß√£o do PostgreSQL (Docker)
+- [x] Modelagem do banco (User, Chat, Message)
+- [x] Migrations criadas
+
+### Ì¥Ñ Pr√≥ximos passos
+- [ ] Rotas de autentica√ß√£o
+- [ ] Sistema de mensagens
+- [ ] IA simulada
+- [ ] Frontend
+
+---
+
+## Ì±§ Desenvolvido por
+
+**Fernanda Vicente**
+- Portfolio: [nandavicente.github.io](https://nandavicente.github.io/)
+- GitHub: [@nandavicente](https://github.com/nandavicente)
+
+---
+
+‚≠ê **Projeto desenvolvido para o processo seletivo da IAgiliza**

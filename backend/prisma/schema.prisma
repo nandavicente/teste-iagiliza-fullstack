@@ -1,0 +1,56 @@
+// Configuração do Prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Model: User - Usuário do sistema
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String   // Senha com hash (bcrypt)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relações
+  chats    Chat[]
+  messages Message[]
+
+  @@map("users")
+}
+
+// Model: Chat - Conversa do usuário
+model Chat {
+  id        String   @id @default(uuid())
+  title     String   @default("New Chat")
+  userId    String   @map("user_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relações
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@map("chats")
+}
+
+// Model: Message - Mensagem da conversa
+model Message {
+  id        String   @id @default(uuid())
+  content   String   @db.Text
+  role      String   // "user" ou "assistant"
+  userId    String   @map("user_id")
+  chatId    String   @map("chat_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relações
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chat Chat @relation(fields: [chatId], references: [id], onDelete: Cascade)
+
+  @@map("messages")
+}
