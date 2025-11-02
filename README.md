@@ -127,6 +127,7 @@ A IA pode responder com algo simples, por exemplo:
 
 > **Nota:** Esta seção foi adicionada como parte da entrega do teste.
 
+
 ### Pré-requisitos
 - Node.js 18+
 - Docker e Docker Compose
